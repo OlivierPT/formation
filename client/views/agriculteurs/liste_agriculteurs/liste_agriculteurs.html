@@ -1,0 +1,29 @@
+<template name="ListeAgriculteurs">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Code postal</th>
+                <th>Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each items}}
+            <tr>
+                <td>{{prenom}}</td>
+                <td>{{nom}}</td>
+                <td>{{adresse1}}</td>
+                <td>{{codePostal}}</td>
+                <td>{{typeAgriculteur.libelle}}</td> 
+                <td>
+                    <a href="/detailAgriculteur" id="edit" type="button" class="btn btn-primary" >Editer</a>
+                    <a href="/detailAgriculteur" id="delete" type="button" class="btn btn-danger">Editer</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>
